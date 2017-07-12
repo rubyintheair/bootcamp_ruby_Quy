@@ -36,9 +36,16 @@ p backwards("violets are blue")
 
 # HINT: split into words, then reverse the array.
 
-# _Task 3:_ write a method ****make_reverse_poem**** that make a reverse poem:
+puts "Task 3:_ write a method ****make_reverse_poem**** that make a reverse poem:"
+rose_line = "roses are red"
+violet_line = "violets are blue"
 
-# puts make_reverse_poem([rose_line, violet_line])
+def make_reverse_poem(array)
+  array.map {|e| backwards(e)}
+end
+
+puts "Example 1: "
+puts make_reverse_poem([rose_line, violet_line])
 
 # You'll get:
 
@@ -47,8 +54,8 @@ p backwards("violets are blue")
 
 
 # Or a longer example:
-
-# puts reverse_poem([rose_line, violet_line, "ruby is fun", "cool so are you"])
+puts "\nExample 2: "
+puts make_reverse_poem([rose_line, violet_line, "ruby is fun", "cool so are you"])
 
 # # OUTPUT:
 

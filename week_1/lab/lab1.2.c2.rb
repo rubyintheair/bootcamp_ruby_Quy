@@ -36,4 +36,4 @@ puts to_tasks_random(to_task)
 #      {"name"=>"review string", "priority"=>2}, 
 #      {"name"=>"take a break", "priority"=>1}, 
 #      {"name"=>"make code cleaner", "priority"=>3}]
-# 6. 
+# 

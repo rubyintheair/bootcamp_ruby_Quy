@@ -25,10 +25,7 @@
 # 4. Use the each method in the array of numbers and only print out the odd numbers.
 
 
-puts "1. Define numbers to be an array of numbers from 1 to 10."
-puts "Puts the other string to this file: "
-puts "Puts the third times: "
-puts "Puts the four times: "
+
 numbers = (1..10).to_a 
 numbers.each {|number| puts number}
 numbers.each do |number|

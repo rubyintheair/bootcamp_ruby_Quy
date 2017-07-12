@@ -6,6 +6,7 @@ class Person
     @age = age 
   end 
 
+
   def partner_youngest_age(age = nil)
     age = @age
     (age / 2) + 7

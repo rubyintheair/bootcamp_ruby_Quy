@@ -26,6 +26,7 @@
 
 
 puts "1. Define numbers to be an array of numbers from 1 to 10."
+puts "Puts the other string to this file: "
 numbers = (1..10).to_a 
 numbers.each {|number| puts number}
 numbers.each do |number|

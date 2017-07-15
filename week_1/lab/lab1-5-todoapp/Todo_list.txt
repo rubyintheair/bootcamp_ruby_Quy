@@ -1,0 +1,8 @@
+- [x] Learn Variable
+- [x] Learn Array
+- [ ] Learn Hash
+- [ ] Learn String
+- [ ] Learn Class
+- [x] Learn File
+- [ ] Learn Git
+- [ ] Really Important thing: Git

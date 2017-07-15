@@ -1,0 +1,1 @@
+This is TODO app, which uses for checking/unchecking, removing, adding and display daily tasks

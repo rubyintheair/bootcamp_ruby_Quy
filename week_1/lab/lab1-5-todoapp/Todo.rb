@@ -51,12 +51,12 @@ class Todo
   end
 
   def instruction
-    puts "="*10 + "  Guideline  " + "="*10
-    puts "="*10 + " + task_content: add new task "  + "="*10
-    puts "="*10 + " remove index: remove task at index order in list "  + "="*10
-    puts "="*10 + " all  | done | undone: display all/done/undone tasks "  + "="*10
-    puts "="*10 + " check index | uncheck index: check/uncheck index task "  + "="*10
-    puts "="*10 + " save -f: Save and print current file to another file "  + "="*10
+    puts ("="*20 + "  Guideline  " + "="*20).colorize(:color => :green)
+    puts ("="*10 + " + task_content: add new task "  + "="*10).colorize(:color => :green)
+    puts ("="*10 + " remove index: remove task at index order and save to Trash file "  + "="*10).colorize(:color => :green)
+    puts ("="*10 + " all  | done | undone: display all/done/undone tasks "  + "="*10).colorize(:color => :green)
+    puts ("="*10 + " check index | uncheck index: check/uncheck index task "  + "="*10).colorize(:color => :green)
+    puts ("="*10 + " save -f file_name: Save and print current file to another file "  + "="*10).colorize(:color => :green)
   end
   
 
@@ -111,17 +111,18 @@ class Todo
   
   
   def prompt
-    puts "What do you want to do?"
+    puts "What do you want to do?".upcase.colorize(:color => :yellow)
     puts instruction
     @input = gets.chomp
     loop do 
       if @input == "exit"
-        puts "Good bye!!!"
+        puts "Good bye!!!\nSee you later".upcase.colorize(:color => :red)
         break
       else
         get_input_and_exit(@input)
       end
-      puts "What do you want to do NEXT? " 
+      puts "What do you want to do NEXT? ".colorize(:color => :yellow) 
+      puts instruction
       @input = gets.chomp
     end
   end
@@ -136,11 +137,15 @@ puts todo_a.list
 puts todo_a.load_data
 puts "Display all items: "
 todo_a.show_all
-puts "\nDisplay done items: "
-todo_a.show_done
-puts "\nDisplay undone items: "
-todo_a.show_undone
-puts "\nPlay prompt: "
+# puts "\nDisplay done items: "
+# todo_a.show_done
+# puts "\nDisplay undone items: "
+# todo_a.show_undone
+# if ARGV[3] == "all"
+#   todo_a.show_all
+# end
+
+# puts "\nPlay prompt: "
 todo_a.prompt
 
 

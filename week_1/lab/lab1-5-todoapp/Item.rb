@@ -45,20 +45,20 @@ class Item
   end
 end
 
-new_item = Item.new("- [ ] Learn Class")
-puts "Print by puts: "
-puts new_item
-puts "\nPrint by p: "
-p new_item
+# new_item = Item.new("- [ ] Learn Class")
+# puts "Print by puts: "
+# puts new_item
+# puts "\nPrint by p: "
+# p new_item
 
-puts new_item.done?
-puts "Before checking as done: "
-puts new_item.display
-new_item.mark_done! 
-puts "After checking as done: "
-puts new_item.done?
-puts new_item.display
-puts new_item.mark_undone!
+# puts new_item.done?
+# puts "Before checking as done: "
+# puts new_item.display
+# new_item.mark_done! 
+# puts "After checking as done: "
+# puts new_item.done?
+# puts new_item.display
+# puts new_item.mark_undone!
 
 
 # test_item = Item.new_from_line("- [x] Learn Git")

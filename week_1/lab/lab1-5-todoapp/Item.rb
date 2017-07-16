@@ -1,8 +1,9 @@
 
 class Item
   attr_accessor :name, :done
-  attr_reader :item
+  attr_reader :item, :test
   def initialize(name, done = false)
+    @test = name
     @name = name[6..-1]
     @done = name[2..4]
   end
@@ -31,6 +32,11 @@ class Item
     # "#{@done}:  #{name}"
     "- #{@done} #{@name}"
   end
+
+  def find_keyword(keyword)
+    @name.include?(keyword) #return true or false
+  end
+  
   
   def self.new_from_line(line) #Ham nay se tra ve 1 cai dia chi
     name = line[6..-1]

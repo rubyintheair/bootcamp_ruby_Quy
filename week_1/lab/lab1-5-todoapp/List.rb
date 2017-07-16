@@ -7,6 +7,7 @@
 # * Bonus: implement a display method
 
 require_relative "Item"
+require "colorize"
 class List 
   attr_accessor :items
   def initialize(items = [])
@@ -23,7 +24,13 @@ class List
   end
 
   def display
-    @items.each_with_index {|item, index| puts "#{item.done} #{item.name} (#{index + 1})"}
+    @items.each_with_index do |item, index| 
+      if item.done?
+        puts "#{item.done} #{item.name} (#{index + 1})"
+      else
+        puts "#{item.done} #{item.name} (#{index + 1})".colorize(:color => :red, :background => :white)
+      end
+    end
   end
 
   def done_items
@@ -40,7 +47,7 @@ class List
   end
   
   def display_undone
-    undone_items.each_with_index {|item, index| puts "#{item.done} #{item.name} (#{index + 1})"}
+    undone_items.each_with_index {|item, index| puts "#{item.done} #{item.name} (#{index + 1})".colorize :red}
   end
   
   def delete(index)
@@ -54,6 +61,16 @@ class List
   def uncheck(index)
     @items[index].mark_undone!
   end
+
+  def keyword_items(keyword)
+    @items.select {|item| item.find_keyword(keyword)}
+  end
+
+  def display_keyword(keyword)
+    keyword_items(keyword).each_with_index {|item, index| puts "#{item.done} #{item.name} (#{index + 1})".colorize( :background => :green)}
+  end
+  
+  
   
 end
 

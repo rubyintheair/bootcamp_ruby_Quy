@@ -1,0 +1,6 @@
+- [x] Learn String
+- [ ] Learn Class
+- [x] Learn Git
+- [ ] Buy books
+- [ ] Buy things
+- [ ] Buy lipsticks

@@ -106,6 +106,8 @@ class Todo
       f = File.new("#{input[8..-1]}.txt",  "a")
       @list.items.each {|e| f << "- #{e.done} #{e.name}\n"}
       f.close
+    else
+      puts "Sorry! I don't understand what you mean? Let try again!!!"
     end
   end
   
@@ -133,20 +135,8 @@ end
 
 
 todo_a = Todo.new("Todo_list.txt")
-puts todo_a.list
-puts todo_a.load_data
-puts "Display all items: "
-todo_a.show_all
-# puts "\nDisplay done items: "
-# todo_a.show_done
-# puts "\nDisplay undone items: "
-# todo_a.show_undone
-# if ARGV[3] == "all"
-#   todo_a.show_all
-# end
-
-# puts "\nPlay prompt: "
-todo_a.prompt
+todo_a.load_data
+puts todo_a.prompt
 
 
 

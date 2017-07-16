@@ -67,7 +67,11 @@ class List
   end
 
   def display_keyword(keyword)
-    keyword_items(keyword).each_with_index {|item, index| puts "#{item.done} #{item.name} (#{index + 1})".colorize( :background => :green)}
+    if keyword_items(keyword).count == 0
+      puts "Sorry!!! We don't find any item contains the \"#{keyword}\"".upcase.colorize(:color => :red)
+    else
+      keyword_items(keyword).each_with_index {|item, index| puts "#{item.done} #{item.name} (#{index + 1})".colorize( :background => :green)}
+    end
   end
   
   

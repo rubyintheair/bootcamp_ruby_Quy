@@ -87,14 +87,11 @@ class Todo
           show_all
         end
         
-        # @file = File.read(@filename).write("Todo_write.txt", "") 
-        # @list.items.each do |item| 
-        #   @file << File.write("Todo_write.txt", "- #{item.done} #{item.name}")
-        # end
         
+        f = File.new("Todo_write.txt",  "w+")
+        @list.items.each {|e| f << "- #{e.done} #{e.name}\n"}
+        f.close
         
-        # file.open("Todo_write.txt", "w") {|file| file.write("#{@list.items}") }
-
     end
     
 

@@ -57,6 +57,7 @@ class Todo
     puts ("="*10 + " all  | done | undone: display all/done/undone tasks "  + "="*10).colorize(:color => :green)
     puts ("="*10 + " check index | uncheck index: check/uncheck index task "  + "="*10).colorize(:color => :green)
     puts ("="*10 + " save -f file_name: Save and print current file to another file "  + "="*10).colorize(:color => :green)
+    puts ("="*10 + " find keyword: find all tasks which contain keyword "  + "="*10).colorize(:color => :green)
   end
   
 
@@ -99,7 +100,6 @@ class Todo
       puts "Display all items: "
       show_all
     elsif input.include?("find")
-      puts "Implement find keyword methods:"
       puts "Display item with keyword #{input[5..-1]}"
       show_keyword(input[5..-1])
     elsif input.include?("save -f")

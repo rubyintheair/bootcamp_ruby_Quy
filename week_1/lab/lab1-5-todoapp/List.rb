@@ -26,9 +26,9 @@ class List
   def display
     @items.each_with_index do |item, index| 
       if item.done?
-        puts "#{item.done} #{item.name} (#{index + 1})"
+        puts "#{item.done} #{item.name.colorize :green} (#{index + 1})"
       else
-        puts "#{item.done} #{item.name} (#{index + 1})".colorize(:color => :red, :background => :white)
+        puts "#{item.done} #{item.name.colorize :yellow} (#{index + 1})"
       end
     end
   end

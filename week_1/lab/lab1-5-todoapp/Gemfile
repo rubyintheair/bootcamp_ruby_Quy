@@ -1,3 +1,5 @@
 source "https://rubygems.org"
 
-require "colorize"
+gem "colorize"
+gem "terminal-table"
+gem "sinatra"
